@@ -2,11 +2,12 @@
 
 /* --------------------------------------CSS Variable--------------------------------------- */
 :root {
-  --red-border: 0.1px rgba(208, 25, 5, 0.407) solid;
-  --text-bg: #5e5b5b36;
+  --red-border: 1px rgba(208, 25, 5, 0.407) solid;
+  --text-bg: #5e5b5b24;
   --text: #423b3b;
   --white-text:#fff;
   --black-bg: black;
+  --red-bg:rgb(208, 25, 5);
   --link-hover: rgb(208, 25, 5);
   --roboto: Roboto;
 }
@@ -14,13 +15,13 @@
   font-family: var(--roboto);
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 section {
   margin: auto;
   width: 70%;
   color: var(--text);
 }
-
 /* --------------------------------------Navbar--------------------------------------- */
 .navbar {
   background: var(--black-bg);
@@ -52,7 +53,7 @@ section {
 /* --------------------------------------Header--------------------------------------- */
 .header-box {
   width: 100%;
-  min-height: calc(60vh - 68px);
+  min-height: calc(54vh - 68px);
   background: linear-gradient(rgba(23, 20, 20, 0.844), rgba(23, 20, 20, 0.849)),
     url("../img/background.png");
   background-repeat: repeat;
@@ -63,7 +64,7 @@ section {
   font-size: 80px;
   color: var(--white-text);
   text-align: center;
-  padding-top: 8%;
+  padding-top: 6%;
 }
 
 .header-sub {
@@ -75,16 +76,21 @@ section {
 /* --------------------------------------About--------------------------------------- */
 .about {
   padding: 50px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 2%;
   background-color: var(--text-bg);
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
 }
 .about-img {
   margin: 0 50px 0 50px;
   display: inline-block;
 }
-
+.about img{
+  clip-path: circle(50% at 50% 50%);
+}
 .about-text {
-  width: 55%;
+  width: 60%;
   padding: 20px;
   display: inline-block;
   box-sizing: border-box;
@@ -94,12 +100,12 @@ section {
 /* --------------------------------------Header--------------------------------------- */
 /* --------------------------------------Footer--------------------------------------- */
 .footer{
-  background-color: var(--black-bg);
-  height: 20;
   color: var(--white-text);
+  background-color: var(--black-bg);
+  margin: auto;
+  height: auto;
 }
 .Link-menu{
-  display: block;
   padding: 50px;
 }
 .Link-menu-list{
@@ -114,4 +120,11 @@ section {
 .Link-item a:hover{
   color: var(--link-hover);
 
+}
+.copyright{
+  width: 100%;
+  background-color: var(--black-bg);
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 0 10px 0;
 }
