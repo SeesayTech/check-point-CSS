@@ -8,8 +8,11 @@
   --white-text:#fff;
   --black-bg: black;
   --red-bg:rgb(208, 25, 5);
+  --soft-red:rgba(208, 25, 5, 0.407);
   --link-hover: rgb(208, 25, 5);
   --roboto: Roboto;
+  --linear-bg:linear-gradient(rgba(23, 20, 20, 0.844), rgba(23, 20, 20, 0.849));
+  --box-sdw:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
 }
 * {
   font-family: var(--roboto);
@@ -27,6 +30,9 @@ section {
   background: var(--black-bg);
   align-content: center;
   border-bottom: var(--red-border);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .menu {
   margin: auto;
@@ -54,7 +60,7 @@ section {
 .header-box {
   width: 100%;
   min-height: calc(54vh - 68px);
-  background: linear-gradient(rgba(23, 20, 20, 0.844), rgba(23, 20, 20, 0.849)),
+  background: var(--linear-bg),
     url("../img/background.png");
   background-repeat: repeat;
   background-position: center;
@@ -65,6 +71,11 @@ section {
   color: var(--white-text);
   text-align: center;
   padding-top: 6%;
+}
+.header-title span{
+  color: var(--soft-red);
+  display: inline-block;
+transform: rotate(-25deg);
 }
 
 .header-sub {
@@ -78,9 +89,8 @@ section {
   padding: 50px;
   margin-top: 20px;
   margin-bottom: 2%;
-  background-color: var(--text-bg);
   box-sizing: border-box;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: var(--box-sdw);
 }
 .about-img {
   margin: 0 50px 0 50px;
@@ -88,6 +98,9 @@ section {
 }
 .about img{
   clip-path: circle(50% at 50% 50%);
+}
+.about-title{
+  padding-bottom: 8px;
 }
 .about-text {
   width: 60%;
@@ -97,7 +110,27 @@ section {
 }
 /* --------------------------------------Header--------------------------------------- */
 /* --------------------------------------Header--------------------------------------- */
-/* --------------------------------------Header--------------------------------------- */
+/* --------------------------------------Contact--------------------------------------- */
+.contact{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 50px;
+  box-sizing: border-box;
+  box-shadow: var(--box-sdw);
+}
+.form-box{
+ align-content: center;
+}
+.form-field{
+  background: #000;
+  margin: 25px auto ;
+  display: block;
+  width: 55%;
+}
+.form-field *{
+  align-content: center;
+  display: block;
+}
 /* --------------------------------------Footer--------------------------------------- */
 .footer{
   color: var(--white-text);
@@ -105,26 +138,12 @@ section {
   margin: auto;
   height: auto;
 }
-.Link-menu{
-  padding: 50px;
-}
-.Link-menu-list{
-  list-style: none;
-}
-.Link-item a{
-  color: var(--white-text);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-}
-.Link-item a:hover{
-  color: var(--link-hover);
-
-}
 .copyright{
   width: 100%;
-  background-color: var(--black-bg);
+  font-weight: 500;
+  background-color: var(--soft-red);
   text-align: center;
   font-size: 12px;
-  padding: 5px 0 10px 0;
+  padding: 10px 0 10px 0;
+  margin: 0;
 }
