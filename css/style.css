@@ -23,6 +23,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  scroll-margin-top: 78px;
 }
 section {
   margin: auto;
@@ -91,7 +92,7 @@ section {
 /* --------------------------------------About--------------------------------------- */
 .about {
   padding: 50px;
-  margin-top: 20px;
+  margin-top: 2%;
   margin-bottom: 2%;
   box-sizing: border-box;
   box-shadow: var(--box-sdw);
@@ -103,7 +104,7 @@ section {
   display: inline-block;
 }
 .about img {
-  width: 250px;
+  width: 200px;
   height: auto;
 }
 .about-title {
@@ -162,9 +163,11 @@ label {
   width: 50%;
   align-content: center;
   height: 30px;
+  border: 1px solid;
   border-radius: 10px;
   border-color: none;
   margin: auto;
+  padding: 5px;
 }
 
 #text-zone {
